@@ -1,0 +1,68 @@
+#include Servo.h
+
+Servo myservo1; 
+Servo myservo2; 
+Servo myservo3;  
+Servo myservo4;  
+Servo myservo5;  
+
+int pos = 0;  
+
+String mensaje;
+
+void setup(){
+Serial.begin(9600); 
+myservo1.attach(9); 
+myservo2.attach(10);  
+myservo3.attach(11);  
+myservo4.attach(5);  
+myservo5.attach(6);  
+}
+void loop(){
+while(Serial.available()){
+delay(10); 
+char c = Serial.read();
+mensaje += c;  
+}
+if(mensaje.length()0){ 
+mover dedo indice
+if(mensaje==indice){
+Serial.println(pos); 
+myservo1.write(10);
+delay(15);
+}
+mensaje=; 
+mover dedo medio
+if (mensaje==medio){
+Serial.println(pos);interpretando mensaje
+myservo2.write(10);
+delay(15);
+}y ejecutando instrucciones
+mensaje=;reseteando variable
+
+mover dedo anular
+if (mensaje==anular){
+Serial.println(pos);interpretando mensaje
+myservo3.write(10);
+delay(15);
+}y ejecutando instrucciones
+mensaje=;reseteando variable
+
+mover dedo menyique
+if (mensaje==menyique){
+Serial.println(pos);interpretando mensaje
+myservo4.write(10);
+
+delay(15);
+}y ejecutando instrucciones
+mensaje=;reseteando variable
+
+mover dedo pulgar
+if (mensaje==pulgar){
+Serial.println(pos);interpretando mensaje
+myservo5.write(10);
+delay(15);
+}y ejecutando instrucciones
+mensaje=;reseteando variable
+}
+}
